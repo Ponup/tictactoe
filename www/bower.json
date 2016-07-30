@@ -1,0 +1,22 @@
+{
+  "name": "TicTacToe",
+  "authors": [
+    "game+tictactoe@ponup.com"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://ponup.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0",
+    "jquery": "^3.1.0"
+  }
+}

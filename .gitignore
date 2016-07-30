@@ -1,0 +1,5 @@
+platforms
+plugins
+www/js/config.js
+tictactoe.keystore
+build.sh
