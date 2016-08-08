@@ -34,14 +34,32 @@ define(function(require) {
 
         $( this ).html('<img src="img/dog.png" />');
         this.setAttribute('occupied', true);
-        addRandom();
+
+        addOverlay();
+        var randomDelay = getRandomInt(600, 2000);
+        setTimeout(function() {
+            addComputerMove();
+            removeOverlay();
+        }, randomDelay);
     });
+
+    function addOverlay() {
+        var div = document.createElement('div');
+        div.setAttribute('id', 'overlay');
+        div.className = 'overlay';
+        document.body.appendChild(div);
+    }
+
+    function removeOverlay() {
+        var overlayDiv = document.getElementById('overlay');
+        document.body.removeChild(overlayDiv);
+    }
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function addRandom() {
+    function addComputerMove() {
         var unoccupied = $positions.filter(function(index, pos) {
             return pos.getAttribute('occupied') === null;
         });
